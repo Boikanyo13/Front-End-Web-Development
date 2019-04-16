@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>Class List</title>
+	<meta charset = "utf-8" />
+	<script defer src = "index.js"></script>
+</head>
+<body>
+	<h1 id = "heading">Students in the school of EIE: </h1>
+	<h3 id = "subheading" >4th Year Class</h3>
+	<p>1. Boikanyo Radiokana</p>
+	<p>2. Elias Sepuru</p>
+	<p>3. Victor Montshing</p>
+	<div id = "studentList"></div>
+	<form>
+		Student Name:<input id = "saveButton"  type = "text" value = "">
+			<!-- <input type = "submit" value = "Save"> -->
+	</form>
+
+	<button type = "button" id = 'stButton'>Save</button>
+	<button type = "button" id = "addButton">Add</button>
+
+	<!--This button is pretty useless-->
+	<button type = "button" id = "addButton1">Add Student</button><br/>
+
+	<label for = 'Choose Year of Study'> Choose Year of Study: </label> 
+		<select id = "YOS">
+			<option value = ""></option>
+			<option value = "YOS1">YOS1</option>
+			<option value = "YOS2">YOS2</option>
+			<option value = "YOS3">YOS3</option>
+			<option value = "YOS4">YOS4</option>
+		</select><br/>
+	<button type = "button"	id = "MyButton" >Change Heading</button><br/>
+	<h3>Courses</h3>
+	<ul id = 'list'>
+		<li><a href = "https://witseie.github.io/software-dev-3/">ELEN4010</a></li>
+		<li><a href = "http://cle.wits.ac.za/">ELEN4020</a></li>
+		<li><a href = "http://cle.wits.ac.za/">ELEN4019</a></li>
+		<li><a href = "http://dept.ee.wits.ac.za/%7Echeng/ELEN4017/">ELEN4010</a></li>
+	</ul><br/>
+	<button type = "button" id = "DeleteButton" onclick="deleteItems()">Click to button to remove item</button>
+
+</body>
+</html>
