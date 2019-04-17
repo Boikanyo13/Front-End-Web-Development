@@ -87,3 +87,11 @@ function Search () {
     }
   }
 }
+
+function Table () {
+  let input, filter, table, tr, td, i, txtValue
+  input = document.getElementById('table')
+  filter = input.value.toUpperCase()
+  table = document.getElementById('studentsTable')
+  tr = table.getElementsByTagName('tr')
+}

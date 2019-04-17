@@ -35,4 +35,13 @@
   background-color: #eee;
 }
 
+#studentsTable {
+  border-collapse:collapse;
+  width: 60%;
+  border:1px solid #ddd;
+  font-size:18px;
+}
+#studentsTable tr.header, #studentsTable tr.hover{
+  background-color: #f1f1f1;
+}
 
