@@ -24,7 +24,7 @@ let students = [
   {
     name: 'Kwezi',
     studentNum: 1386807,
-    YOS: 4,
+    YOS: 3,
     electives: [electiveTwo, electiveThree, electiveOne]
 
   },
@@ -51,18 +51,21 @@ let students = [
   }
 ]
 
-// student.findIndex(function(element)).electives
+let count = 0
 
-const checkElectives = function (student) {
-  if ((student.electives.findIndex(function (element) {
-    return element === electiveOne
-  })) !== -1) {
-    return true
-  }
+// This button adds a student to from the array to the html file and allows
+// it to be queried
+let button2 = document.getElementById('DisplayStudentInArray')
 
-  return false
-}
+button2.addEventListener('click', function StArray () {
+  let student = document.createElement('li')
+  let val = document.createElement('a')
+  let st = document.createTextNode(students[count].name)
+  val.appendChild(st)
+  val.setAttribute('href', '#')
+  student.appendChild(val)
+  let lll = document.getElementById('list')
+  lll.appendChild(student)
 
-const elen4010 = students.filter(student => checkElectives(student))
-
-console.log(elen4010)
+  count = count + 1
+}, false)

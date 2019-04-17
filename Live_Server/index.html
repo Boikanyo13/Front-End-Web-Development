@@ -1,45 +1,91 @@
 <!DOCTYPE html>
 <html lang = "en">
+
 <head>
-	<title>Class List</title>
-	<meta charset = "utf-8" />
-	<script defer src = "index.js"></script>
+<title>Class List</title>
+<meta charset = "utf-8" />
+<script defer src = "index.js"></script>
+<script defer src = "exe10.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#list li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#list li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+
 </head>
 <body>
-	<h1 id = "heading">Students in the school of EIE: </h1>
-	<h3 id = "subheading" >4th Year Class</h3>
-	<p>1. Boikanyo Radiokana</p>
-	<p>2. Elias Sepuru</p>
-	<p>3. Victor Montshing</p>
-	<div id = "studentList"></div>
-	<form>
-		Student Name:<input id = "saveButton"  type = "text" value = "">
-			<!-- <input type = "submit" value = "Save"> -->
-	</form>
+	<h1>Class List</h1>
+	
+	<input type = "text" id = "myInput" onkeyup="Search()" placeholder = "Search for students" title = "TYpe in a name">
 
-	<button type = "button" id = 'stButton'>Save</button>
-	<button type = "button" id = "addButton">Add</button>
-
-	<!--This button is pretty useless-->
-	<button type = "button" id = "addButton1">Add Student</button><br/>
-
-	<label for = 'Choose Year of Study'> Choose Year of Study: </label> 
-		<select id = "YOS">
-			<option value = ""></option>
-			<option value = "YOS1">YOS1</option>
-			<option value = "YOS2">YOS2</option>
-			<option value = "YOS3">YOS3</option>
-			<option value = "YOS4">YOS4</option>
-		</select><br/>
-	<button type = "button"	id = "MyButton" >Change Heading</button><br/>
-	<h3>Courses</h3>
 	<ul id = 'list'>
-		<li><a href = "https://witseie.github.io/software-dev-3/">ELEN4010</a></li>
-		<li><a href = "http://cle.wits.ac.za/">ELEN4020</a></li>
-		<li><a href = "http://cle.wits.ac.za/">ELEN4019</a></li>
-		<li><a href = "http://dept.ee.wits.ac.za/%7Echeng/ELEN4017/">ELEN4010</a></li>
-	</ul><br/>
-	<button type = "button" id = "DeleteButton" onclick="deleteItems()">Click to button to remove item</button>
+		<li><a href="#">Elias Sepuru</a></li>
+		<li><a href="#">Lesedi Radiokana</a></li>
+	</ul>
 
+	<div id = "studentList"></div>
+	<button type = "button" id = "addStudentButton">AddStudent</button>
+
+	<div id ="studentArray">	
+		<h3>Student DETAILS</h3>
+		<p> </p>
+	</div>
+
+	<button type = "button" id = DisplayStudentInArray>AddStudents</button>
+
+	<script>
+		//Search for the name of a student and display elements close to the name
+		function Search() {
+			var input, filter, ul, li, a, i, txtValue
+			input = document.getElementById("myInput")
+			filter = input.value.toUpperCase()
+			ul = document.getElementById("list")
+			li = ul.getElementsByTagName("li")
+			for (i = 0; i < li.length; i++) {
+				a = li[i].getElementsByTagName("a")[0]
+				txtValue = a.textContent || a.innerText
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					li[i].style.display = ""
+				} else {
+					li[i].style.display = "none"
+				}
+			}
+		}
+    </script>
+			
 </body>
-</html>
+</html> 
