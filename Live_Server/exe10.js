@@ -88,7 +88,7 @@ function Search () {
   }
 }
 
-function Table () {
+function SearchTable () {
   let input, filter, table, tr, td, i, txtValue
   input = document.getElementById('table')
   filter = input.value.toUpperCase()

@@ -1,11 +1,15 @@
 'use strict'
 
-let button = document.getElementById('addStudentButton')
+let express = require('express')
+let app = express()
 
-button.addEventListener('click', function () {
-  let paragraph = document.createElement('li') // CReate <p> element
-  let text = document.createTextNode('Kganya Sepuru') // Create text node
-  paragraph.appendChild(text) // Append the text to <p>
-  let st = document.getElementById('list')
-  st.appendChild(paragraph) // Append <p> to <body>
-}, false)
+// loading routers
+let mainRouter = require('./mainRoutes.js')
+let classRouter = require('./classRoutes.js')
+
+// mouting our routers
+app.use('/', mainRouter)
+app.use('/class', classRouter)
+
+app.listen(3000)
+console.log('Express server running on port 3000')
