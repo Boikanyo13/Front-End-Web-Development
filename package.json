@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Boikanyo13/ELEN4010-LAB3#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
     "express": "4.16.4"
   }
 }

@@ -36,6 +36,30 @@ router.post('/api/create', function (req, res) {
   res.redirect(req.baseUrl + '/api/list')
 })
 
+/* router.post('/api/delete', function (req, res) {
+  if (req.body.deleteSt < classList.length) {
+    console.log('deleting the following student: ', req.body.deleteSt)
+    classList.splice(req.body.deleteSt, 1)
+    res.redirect(req.baseUrl + '/api/list')
+  } else {
+    console.log('The row you entered does not exist!')
+    res.redirect(req.baseUrl + '/delete')
+  }
+})
+
+router.post('/api/edit', function (req, res) {
+  let index = req.body.editStudent.split(',')[0]
+  let newName = req.body.editStudent.split(',')[1]
+
+  if (index < classList.length) {
+    classList[index] = newName
+    res.redirect(req.baseUrl + '/api/list')
+  } else {
+    console.log('The row you entered does not exist!')
+    res.redirect(req.baseUrl + '/edit')
+  }
+}) */
+
 router.post('/api/delete', function (req, res) {
   if (req.body.deleteSt < classList.length) {
     console.log('deleting the following student: ', req.body.deleteSt)
