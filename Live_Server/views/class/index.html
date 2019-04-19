@@ -1,60 +1,18 @@
 <!DOCTYPE html>
-<html lang = "en">
-
+<html lang="en">
 <head>
-<title>Class List</title>
-<meta charset = "utf-8" />
-<!-- <script defer src = "index.js"></script> -->
-<script defer src = "/cdn/scripts/class/index.js"></script>
-
-<link rel="stylesheet" type="text/css" href="/cdn/css/style.css">
-
+	<title>Class List</title>
+	<meta charset="utf-8" />
+	<script src="/cdn/scripts/class/index.js"></script><!-- Our JavaScript
+code for this page-->
 </head>
 <body>
-	<h1>Class List</h1>
-	
-	<input type = "text" id = "myInput" onkeyup="Search()" placeholder = "Search for students" title = "TYpe in a name">
-
-	<ul id = 'list'>
-		<li><a href="#">Elias Sepuru</a></li>
-		<li><a href="#">Lesedi Radiokana</a></li>
-	</ul>
-
-	
-
-	<div id = "studentList"></div>
-	<button type = "button" id = "addStudentButton">AddStudent</button>
-
-	<div id ="studentArray">	
-		<h3>Student DETAILS</h3>
-		<p> </p>
-	</div>
-
-	<button type = "button" id = DisplayStudentInArray>AddStudents</button>
-
-	
-	<h3>Table of students</h3>
-	<input type = "text" id = "table" onkeyup = "SearchTable()" placeholder = "Search for names">
-	
-	<table id = "studentsTable">
-		<tr class = "header">
-			<th style = "width:60%;">Student Num</th>
-			<th style = "width:60%;">Name</th>
-			<th style = "width:60%;">YOS</th>
-			
-		</tr>
-		<tr>
-			<td>1386807</td>
-			<td>Boikanyo</td>
-			<td>4</td>
-		</tr>
-		<tr>
-				<td>1427726</td>
-				<td>Elias</td>
-				<td>4</td>
-			</tr>
-
-	</table>
-			
+	<h1>Students in the School of EIE:</h1>
+	<ol id="classList">
+<!-- The list students in the school-->
+	</ol>
+Add a new student:
+	<input type="text" id="newStudentInput"></input>
+	<button type="button" id="addStudentButton">Add</button>
 </body>
-</html> 
+</htm

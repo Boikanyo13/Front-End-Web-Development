@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // mouting our routers
 app.use('/', mainRouter)
-app.use('/todo', todoRouter)
+app.use('/class', todoRouter)
 
 // serving static files
 app.use('/cdn', express.static('public'))
