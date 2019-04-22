@@ -1,5 +1,5 @@
 'use strict'
-
+/*
 fetch('/class/api/list')
   .then(function (response) {
     if (response.ok) {
@@ -24,3 +24,23 @@ fetch('/class/api/list')
   .catch(function (e) {
     alert(e)
   })
+*/
+
+// let classList = document.getElementById('classList')
+
+let button = document.getElementById('addStudentButton')
+
+button.addEventListener('click', function () {
+  let paragraph = document.createElement('p')
+  let text = document.createTextNode('This is a student')
+  paragraph.appendChild(text)
+  document.body.appendChild(paragraph)
+}, false)
+/*
+let li = document.createElement('p')
+let liText = document.createTextNode('Elias')
+
+// li.className += 'list-group-item'
+
+li.appendChild(liText)
+ */
